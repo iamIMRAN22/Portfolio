@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+     .list-red{
+        color: red;
+     }
+     .ul-green{
+        color: green;
+     }
+     .list-blue{
+        color: blue;
+     }
+     body{
+        background-color: lightgray;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+     }
+     div{
+        height:550px;
+        width: 550px;
+        border:3px solid cyan;
+        background-color:white;
+        /* text-align: center; */
+        justify-content:center;
+        display:flex;
+        box-shadow:5px 5px 5px black;
+        border-radius: 10px;
+        padding: 20px;
+        margin-top:30px;
+     }
+    </style>
+</head>
+<body>
+    <div>
+      <ol type="1">
+        <li class="list-red"> Web Tech<span class="bi bi-chevron-right"></span>
+           <ol type="a">
+                <li class="list-blue">Front-end Tech:-</li>
+                <ul type="none" class="ul-green">
+                   <li class="bi bi-forward-fill"> HTML</li>
+                   <li class="bi bi-forward-fill"> CSS</li>
+                   <li  class="bi bi-forward-fill"> JavaScript</li>
+                </ul>
+                <li class="list-blue">back-end Tech:-</li>
+                <ul type="none"  class="ul-green">
+                   <li class="bi bi-forward-fill"> Servlet</li>
+                   <li class="bi bi-forward-fill"> PHP</li>
+                   <li class="bi bi-forward-fill"> ASP.net</li>
+                </ul>
+            </ol> 
+        </li> 
+        <li  class="list-red">Programming Language<span class="bi bi-chevron-right"></span>
+           <ol type="a">
+             <li class="list-blue">Procedural language:-</li>
+               <ul type="none"  class="ul-green">
+                 <li class="bi bi-forward-fill"> C</li>
+                 <li class="bi bi-forward-fill"> Python</li>
+                 <li  class="bi bi-forward-fill"> PL / SQL</li>
+               </ul>
+             <li class="list-blue">OOP language:-</li>
+            <ul type="none"  class="ul-green">
+               <li class="bi bi-forward-fill"> Java</li>
+               <li class="bi bi-forward-fill"> .net</li>
+            </ul>
+           </ol>
+         </li>
+       </ol>
+    </div>
+</body>
+</html>
