@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Order</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        body {
+            background-color:maroon;
+            color:white;
+        }
+        /* #orderBtn{
+            display:flexbox;
+            justify-content: center;
+            text-align: center;
+        } */
+        #headName{
+            color: white;
+            font-weight: bolder;
+            font-family: arial;
+            font-style: italic;
+            font-size: 50px;
+        }
+        /* #sign_in{
+            display:flex;
+            justify-content:right;
+            
+        } */
+        /* #img_head{
+            padding-top:20px;
+        } */
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="input-group">
+            <div>
+                <span id="headName"><b>KFC</b></span>
+    
+            </div>
+            <!-- <div>
+                <span class="bi bi-person" id="sign_in"> Sign In</span>
+            </div> -->
+        </div>
+        <img src="../public/images/KFC_banner.png" width="100%" height="330" id="img_head">
+    </header>    
+    <section>
+        <div class="accordion" id="orderForm">
+
+            <!-- Customer Details -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#customer" data-bs-toggle="collapse" class="btn btn-danger w-100">Customer Details</button>
+                </div>
+                <div class="accordion-collapse collapse show" id="customer" data-bs-parent="#orderForm">
+                    <div class="accordion-body">
+                        <dl>
+                            <dt>Customer Name</dt>
+                            <dd><input type="text" class="form-control" id="txtName"></dd>
+                            <dt>Mobile</dt>
+                            <dd><input type="text" class="form-control" id="txtMobile"></dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--Meal Details-->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button class="btn btn-danger w-100" data-bs-target="#meal" data-bs-toggle="collapse">Select Your Meal</button>
+                </div>
+                <div class="accordion-collapse collapse" id="meal" data-bs-parent="#orderForm">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_burger.jpg" class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>OMG Burger</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="radio" class="form-check-input" value="OMG Burger" id="optBurger" name="meal"> &#8377; 220/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_bucket.jpg" class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>OMG Crispy Bucket</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="radio" class="form-check-input" value="OMG Crispy Bucket" id="optBucket" name="meal"> &#8377; 560/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_redBucket.jpg" class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>OMG Red chilly Bucket</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="radio" class="form-check-input" value="OMG Red Chilly Bucket" id="optredBucket" name="meal"> &#8377; 669/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- second row-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_biryani.jpg" class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>OMG Veg Biryani </h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="radio" class="form-check-input" value="OMG Veg Biryani" id="optBiryani" name="meal2"> &#8377; 189/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_wings.jpg" class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>OMG Hot Wings</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="radio" class="form-check-input" value="OMG Hot Wings" id="optWings" name="meal2"> &#8377; 349/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_mixMeal.jpg" class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>OMG Mix Meal</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="radio" class="form-check-input" value="OMG Mix Meal" id="optMixmeal" name="meal2"> &#8377; 799/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Ad ONs-->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <button data-bs-target="#adon" data-bs-toggle="collapse" class="btn btn-danger w-100">Select AD ON's</button>
+                </div>
+                <div class="accordion-collapse collapse" id="adon" data-bs-parent="#orderForm">
+                    <div class="accordion-body">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_fries.jpg" class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>Chilly Fries</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="optFries" value="Chilly Fries" class="form-check-input">  &#8377; 120/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_chocolava.jpg " class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>Choco lava cake</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="optChoco" value="Choco lava cake" class="form-check-input">  &#8377; 129/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_popcorn.jpg " class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>Hot Popcorn</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="optpopcorn" value="Hot Popcorn" class="form-check-input">  &#8377; 99/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Second Row-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_bun.jpg " class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>Bun</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="optbun" value="Bun" class="form-check-input">  &#8377; 69/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_mudpie.jpg " class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>Mud Pie</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="optmudpie" value="Mud Pie" class="form-check-input">  &#8377; 139/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                               <div class="card">
+                                 <img src="../public/images/KFC_cold1.jpg " class="card-img-top" height="300">
+                               <div class="card-header">
+                               <h2>Pepsi</h2>
+                             </div>
+                             <div class="card-footer">
+                             <h3> <input type="checkbox" id="optpepsi" value="Pepsi" class="form-check-input">  &#8377; 57/- </h3>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                        <!--Third Row-->
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_cold2.jpg " class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>7up</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="opt7up" value="7UP" class="form-check-input">  &#8377; 57/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_cold3.jpg " class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>Pepsi Black</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="optpepsiblack" value="Pepsi Balck" class="form-check-input">  &#8377; 57/- </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="../public/images/KFC_cold4.jpg " class="card-img-top" height="300">
+                                    <div class="card-header">
+                                        <h2>Mirinda</h2>
+                                    </div>
+                                    <div class="card-footer">
+                                        <h3> <input type="checkbox" id="optmirinda" value="Mirinda" class="form-check-input">  &#8377; 57/- </h3>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button data-bs-target="#bill" data-bs-toggle="modal" class="btn btn-danger w-100" onclick="OrderClick()">Place Order</button>
+        <div class="modal fade" id="bill">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header text-primary">
+                        <h2>Your Bill Summary</h2>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-dark">
+                        <dl class="row">
+                            <dt class="col-3">Customer</dt>
+                            <dd class="col-9" id="lblName"></dd>
+                            <dt class="col-3">Mobile</dt>
+                            <dd class="col-9" id="lblMobile"></dd>
+                            <dt class="col-3">Meal Name</dt>
+                            <dd class="col-9" id="lblMeal"></dd>
+                            <dt class="col-3">AdOn's</dt>
+                            <dd class="col-9" id="lblAdon"></dd>
+                            <dt class="col-3"><b>Total</b></dt>
+                            <dd class="col-9" id="lblTotal"></dd>
+                        </dl>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-bs-dismiss="modal" class="btn btn-primary" id="orderBtn">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function OrderClick(){
+            document.getElementById("lblName").innerHTML = document.getElementById("txtName").value;
+            document.getElementById("lblMobile").innerHTML = document.getElementById("txtMobile").value;
+
+            var mealName = "";
+            var mealCost = 0;
+            var adOnName = "";
+            var adOnCost = 0;
+
+            burgerRadio = document.getElementById("optBurger");
+            bucketRadio = document.getElementById("optBucket");
+            redbucketRadio = document.getElementById("optredBucket");
+
+            // Second Row
+            biryaniRadio = document.getElementById("optBiryani");
+            wingsRadio = document.getElementById("optWings");
+            mixmealRadio = document.getElementById("optMixmeal");
+
+
+
+            if(burgerRadio.checked) {
+                mealName = burgerRadio.value +"<br>";
+                mealCost = 220;
+            }
+            if(bucketRadio.checked) {
+                mealName = bucketRadio.value +"<br>";
+                mealCost = 560;
+            }
+            if(redbucketRadio.checked) {
+                mealName = redbucketRadio.value +"<br>";
+                mealCost = 669;
+            }
+
+            // Second Row
+            if(biryaniRadio.checked) {
+                mealName += biryaniRadio.value +"<br>";
+                mealCost += 189;
+            }
+            if(wingsRadio.checked) {
+                mealName += wingsRadio.value +"<br>";
+                mealCost += 349;
+            }
+            if(mixmealRadio.checked) {
+                mealName += mixmealRadio.value +"<br>";
+                mealCost += 799;
+            }
+
+            // First Row
+            friesCheckBox = document.getElementById("optFries");
+            chocoCheckBox = document.getElementById("optChoco");
+            popcornCheckBox = document.getElementById("optpopcorn");
+
+            // Second Row
+            bunCheckBox = document.getElementById("optbun");
+            mudpieCheckBox = document.getElementById("optmudpie");
+            cold1CheckBox = document.getElementById("optpepsi");
+
+            // Third Row
+            cold2CheckBox = document.getElementById("opt7up");
+            cold3CheckBox = document.getElementById("optpepsiblack");
+            cold4CheckBox = document.getElementById("optmirinda");
+
+            
+            //  First Row
+            if(friesCheckBox.checked){
+                adOnName += friesCheckBox.value + "<br>";
+                adOnCost = 120;
+                mealCost = mealCost + adOnCost;
+            }
+            if(chocoCheckBox.checked) {
+                adOnName += chocoCheckBox.value + "<br>";
+                adOnCost =  129;
+                mealCost = mealCost + adOnCost;
+            }
+            if(popcornCheckBox.checked) {
+                adOnName += popcornCheckBox.value + "<br>";
+                adOnCost =  99;
+                mealCost = mealCost + adOnCost;
+            }
+             
+            // Second Row
+            if(bunCheckBox.checked) {
+                adOnName += bunCheckBox.value + "<br>";
+                adOnCost =  69;
+                mealCost = mealCost + adOnCost;
+            }
+            if(mudpieCheckBox.checked) {
+                adOnName += mudpieCheckBox.value + "<br>";
+                adOnCost =  139;
+                mealCost = mealCost + adOnCost;
+            }
+            if(cold1CheckBox.checked) {
+                adOnName += cold1CheckBox.value + "<br>";
+                adOnCost =  57;
+                mealCost = mealCost + adOnCost;
+            }
+
+            // Third Row
+            if(cold2CheckBox.checked) {
+                adOnName += cold2CheckBox.value + "<br>";
+                adOnCost =  57;
+                mealCost = mealCost + adOnCost;
+            }
+            if(cold3CheckBox.checked) {
+                adOnName += cold3CheckBox.value + "<br>";
+                adOnCost =  57;
+                mealCost = mealCost + adOnCost;
+            }
+            if(cold4CheckBox.checked) {
+                adOnName += cold4CheckBox.value + "<br>";
+                adOnCost =  57;
+                mealCost = mealCost + adOnCost;
+            }
+
+            document.getElementById("lblMeal").innerHTML = mealName;
+            document.getElementById("lblAdon").innerHTML = adOnName;
+            document.getElementById("lblTotal").innerHTML ="&#8377;" + mealCost;
+
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
